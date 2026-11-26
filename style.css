@@ -283,10 +283,10 @@ h3 {
 .logo-large img {
     display: block;
     flex: 0 0 auto;
-    width: 500px;
+    width: 220px;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
-    transform: rotate(-90deg);
 }
 
 .officer-dashboard {
@@ -761,7 +761,7 @@ footer {
     }
 
     .logo-large img {
-        width: 300px;
+        width: 220px;
     }
 
     .officer-summary-grid,
@@ -1326,5 +1326,326 @@ body.is-leaving-page main {
 @media (prefers-reduced-motion: reduce) {
     .login-page.is-transitioning .login-card.fade-in-up {
         transition: none;
+    }
+}
+
+/* RESPONSIVE MOBILE LAYOUT */
+
+@media (max-width: 900px) {
+    .navbar {
+        z-index: 1000;
+    }
+
+    .menu-btn {
+        display: inline-flex;
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.06);
+        cursor: pointer;
+        line-height: 1;
+    }
+
+    .menu-btn:focus-visible {
+        outline: 2px solid #b99be7;
+        outline-offset: 3px;
+    }
+
+    .nav-links {
+        top: calc(100% + 10px);
+        right: 0;
+        left: 0;
+        width: 100%;
+        max-height: calc(100vh - 120px);
+        max-height: calc(100dvh - 120px);
+        gap: 4px;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        padding: 12px;
+        border: 1px solid var(--border);
+        background: rgba(18, 18, 26, 0.96);
+        box-shadow: 0 18px 44px rgba(0, 0, 0, 0.42);
+        z-index: 1001;
+    }
+
+    .nav-links a,
+    .nav-links .logout-btn,
+    .nav-links .complaint-btn {
+        display: flex;
+        width: 100%;
+        min-height: 44px;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .nav-links .complaint-btn {
+        display: flex;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        width: calc(100% - 32px);
+        margin: 16px auto;
+        padding: 9px 11px;
+        border-radius: 15px;
+    }
+
+    .logo-area {
+        min-width: 0;
+    }
+
+    .logo {
+        width: 112px;
+        height: 36px;
+    }
+
+    .container {
+        width: calc(100% - 32px);
+        margin-top: 38px;
+        margin-bottom: 38px;
+    }
+
+    .hero {
+        min-height: 0;
+        align-items: flex-start;
+        padding-top: 42px;
+        padding-bottom: 32px;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 9.5vw, 3rem);
+        line-height: 1.1;
+        overflow-wrap: anywhere;
+    }
+
+    h2 {
+        font-size: clamp(1.35rem, 6vw, 1.75rem);
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+
+    .label {
+        font-size: 11px;
+        line-height: 1.5;
+        letter-spacing: 0.08em;
+    }
+
+    .description {
+        font-size: 14px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    .grid,
+    .news-grid,
+    .org-announcements-grid {
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    .card,
+    .announcement-card,
+    .org-announcement-card,
+    .news-content {
+        padding: 19px;
+    }
+
+    .btn,
+    .logout-btn {
+        min-height: 44px;
+    }
+
+    .profile-box {
+        gap: 16px;
+        margin-top: 26px;
+    }
+
+    .logo-large {
+        min-height: 250px;
+        overflow: hidden;
+    }
+
+    .logo-large img {
+        width: min(78vw, 220px);
+        max-width: 100%;
+    }
+
+    .philosophy {
+        padding: 22px;
+    }
+
+    .info-item {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 19px;
+    }
+
+    .info-item > * {
+        min-width: 0;
+    }
+
+    .officer-dashboard {
+        margin-top: 36px;
+    }
+
+    .officer-welcome {
+        padding: 22px;
+    }
+
+    .officer-summary-grid,
+    .officer-links-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .officer-content-form {
+        width: 100%;
+        padding: 19px;
+    }
+
+    .officer-content-form input,
+    .officer-content-form select,
+    .officer-content-form textarea {
+        min-width: 0;
+        font-size: 16px;
+    }
+
+    .officer-content-item {
+        min-width: 0;
+        padding: 19px;
+    }
+
+    .officer-form-actions {
+        flex-direction: column;
+    }
+
+    .officer-form-actions .btn {
+        width: 100%;
+    }
+
+    .org-announcements {
+        margin-top: 38px;
+        padding-top: 26px;
+    }
+
+    .org-announcements-heading {
+        margin-bottom: 18px;
+    }
+
+    .news-image {
+        height: 170px;
+    }
+
+    .news-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .detail-modal {
+        padding: 12px;
+    }
+
+    .detail-modal-dialog {
+        max-height: 85vh;
+        max-height: 85dvh;
+        padding: 24px 20px;
+    }
+
+    .complaint-page .complaint-form-card {
+        padding: 19px;
+    }
+
+    .complaint-page .accordion-button {
+        gap: 10px;
+        padding: 14px;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .complaint-page .accordion-body {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    footer {
+        margin-top: 60px;
+        padding: 26px 16px;
+        line-height: 1.6;
+    }
+
+    .login-page {
+        padding: 26px 16px;
+    }
+
+    .login-page .site-logo {
+        top: 14px;
+        left: 16px;
+        width: 118px;
+    }
+
+    .login-heading {
+        margin-top: 58px;
+    }
+
+    .login-card {
+        padding: 19px;
+    }
+
+    .login-form input,
+    .login-form select {
+        min-height: 46px;
+        font-size: 16px;
+    }
+
+    .login-footer {
+        margin-top: 26px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar,
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .nav-links {
+        padding: 10px;
+    }
+
+    .nav-links a,
+    .nav-links .logout-btn,
+    .nav-links .complaint-btn {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .card,
+    .announcement-card,
+    .org-announcement-card,
+    .news-content,
+    .officer-welcome,
+    .officer-content-form {
+        padding: 16px;
+    }
+
+    .login-card {
+        padding: 16px;
     }
 }
