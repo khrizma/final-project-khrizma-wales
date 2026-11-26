@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard pengurus organisasi CSSA FILKOM UNKLAB.">
+    <title>Dashboard Pengurus | CSSA FILKOM UNKLAB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-required-role="pengurus">
+    <nav class="navbar">
+        <div class="logo-area">
+            <div class="logo">
+                <img src="images/filkom-logo.png" alt="Logo Computer Science Universitas Klabat">
+            </div>
+        </div>
+
+        <button class="menu-btn" type="button" aria-label="Buka menu">☰</button>
+
+        <div class="nav-links">
+            <a href="pengurus.html" class="active">Dashboard</a>
+            <a href="agenda-organisasi.html">Agenda Organisasi</a>
+            <a href="pengaduan.html">Pengaduan</a>
+            <button class="logout-btn" id="logout-btn" type="button">Keluar</button>
+        </div>
+    </nav>
+
+    <main class="container officer-dashboard pengurus-dashboard">
+        <section class="card officer-welcome">
+            <p class="label">AREA PENGURUS ORGANISASI</p>
+            <h1>Dashboard <span>Pengurus CSSA</span></h1>
+            <p class="description">
+                Selamat datang. Gunakan panel ini untuk meninjau pengumuman, agenda publik, dan berita FILKOM UNKLAB.
+            </p>
+        </section>
+
+        <section class="officer-summary-grid" aria-label="Ringkasan konten">
+            <article class="card officer-summary-card">
+                <p>Pengumuman</p>
+                <strong>3</strong>
+                <span>informasi yang sedang ditampilkan</span>
+            </article>
+            <article class="card officer-summary-card">
+                <p>Berita & Artikel</p>
+                <strong>4</strong>
+                <span>artikel yang tersedia untuk ditinjau</span>
+            </article>
+        </section>
+
+        <section class="officer-management" aria-labelledby="officer-content-heading">
+            <p class="label">AKSES CEPAT</p>
+            <h2 id="officer-content-heading">Tinjau Konten Publik</h2>
+            <div class="officer-links-grid">
+                <article class="card officer-action-card">
+                    <h3>Pengumuman</h3>
+                    <p class="description">Periksa jadwal, penerimaan mahasiswa baru, dan informasi penting lainnya.</p>
+                    <a class="btn" href="pengumuman.html">Tinjau Pengumuman →</a>
+                </article>
+                <article class="card officer-action-card">
+                    <h3>Berita & Artikel</h3>
+                    <p class="description">Tinjau publikasi berita, kegiatan, prestasi, dan artikel FILKOM.</p>
+                    <a class="btn" href="berita.html">Tinjau Berita →</a>
+                </article>
+                <article class="card officer-action-card">
+                    <h3>Agenda Publik</h3>
+                    <p class="description">Tinjau agenda kegiatan yang telah diterbitkan untuk mahasiswa dan pengurus.</p>
+                    <a class="btn" href="agenda.html">Tinjau Agenda →</a>
+                </article>
+            </div>
+        </section>
+
+        <aside class="officer-note">
+            <h2>Catatan Pengurus</h2>
+            <p>
+                Panel ini menyediakan ringkasan dan akses untuk meninjau konten yang sudah dipublikasikan. Pengelolaan berita, agenda publik, dan pengumuman tersedia melalui panel Officer.
+            </p>
+        </aside>
+    </main>
+
+    <footer>
+        © <span id="year"></span> CSSA FILKOM Universitas Klabat
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

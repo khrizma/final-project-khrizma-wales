@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Halaman login mahasiswa, pengurus organisasi, dan Officer SICS.">
+    <title>Login | SICS Ilmu Komputer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+    <img class="site-logo" src="images/filkom-logo.png" alt="Logo Computer Science Universitas Klabat">
+    <main class="login-shelbul">
+        <header class="login-heading">
+            <h1>Login <span>SICS</span></h1>
+        </header>
+
+        <section class="card login-card" aria-label="Form login">
+            <div class="icon" aria-hidden="true">↗</div>
+            <h2>Masuk ke akun</h2>
+            <form class="login-form" id="login-form">
+                <label for="user-role">Peran pengguna</label>
+                <select id="user-role" name="role" required>
+                    <option value="">Pilih peran</option>
+                    <option value="mahasiswa">Mahasiswa</option>
+                    <option value="pengurus">Pengurus Organisasi</option>
+                    <option value="officer">Officer</option>
+                </select>
+
+                <label for="user-identity" id="identity-label">Identitas</label>
+                <input
+                    id="user-identity"
+                    name="identity"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]{12}"
+                    maxlength="12"
+                    title="Please match the requested format."
+                    autocomplete="username"
+                    placeholder="Pilih peran terlebih dahulu"
+                    required
+                    disabled
+                >
+
+                <label for="user-password">Kata sandi</label>
+                <input
+                    id="user-password"
+                    name="password"
+                    type="password"
+                    autocomplete="current-password"
+                    placeholder="Masukkan kata sandi"
+                    required
+                >
+
+                <button class="btn login-submit" type="submit">Login</button>
+                <p class="login-status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <footer class="login-footer">
+            © <span id="year"></span> SICS Ilmu Komputer Universitas Klabat
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

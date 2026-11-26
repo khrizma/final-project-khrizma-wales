@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panel Officer untuk mengelola berita, agenda, dan pengumuman FILKOM UNKLAB.">
+    <title>Panel Officer | CSSA FILKOM UNKLAB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-required-role="officer">
+    <nav class="navbar">
+        <div class="logo-area">
+            <div class="logo">
+                <img src="images/filkom-logo.png" alt="Logo Computer Science Universitas Klabat">
+            </div>
+        </div>
+
+        <button class="menu-btn" type="button" aria-label="Buka menu">☰</button>
+
+        <div class="nav-links">
+            <a href="officer.html" class="active">Panel Officer</a>
+            <a href="agenda-organisasi.html">Agenda Organisasi</a>
+            <a href="pengaduan.html">Pengaduan</a>
+            <button class="logout-btn" id="logout-btn" type="button">Keluar</button>
+        </div>
+    </nav>
+
+    <main class="container officer-dashboard">
+        <section class="card officer-welcome">
+            <p class="label">PENGELOLAAN KONTEN</p>
+            <h1>Panel <span>Officer</span></h1>
+            <p class="description">
+                Buat, perbarui, dan hapus berita, agenda publik, serta pengumuman yang akan ditampilkan pada halaman publik.
+            </p>
+        </section>
+
+        <p class="content-status" data-content-status role="status" aria-live="polite" hidden></p>
+
+        <section class="officer-management" aria-labelledby="editor-heading">
+            <p class="label">KONTEN BARU</p>
+            <h2 id="editor-heading">Tambah atau Ubah Konten</h2>
+            <form class="card officer-content-form" id="officer-content-form">
+                <label for="content-type">Jenis konten</label>
+                <select id="content-type" name="type" required>
+                    <option value="berita">Berita</option>
+                    <option value="agenda">Agenda publik</option>
+                    <option value="agenda-internal">Agenda organisasi (Officer &amp; Pengurus)</option>
+                    <option value="pengumuman">Pengumuman</option>
+                </select>
+
+                <label for="content-title">Judul</label>
+                <input id="content-title" name="title" type="text" maxlength="140" required>
+
+                <label for="content-body">Isi</label>
+                <textarea id="content-body" name="body" rows="6" maxlength="5000" required></textarea>
+
+                <div class="officer-form-actions">
+                    <button class="btn" type="submit" id="content-submit">Terbitkan</button>
+                    <button class="btn officer-secondary-btn" type="button" id="content-cancel" hidden>Batal ubah</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="officer-management" aria-labelledby="content-list-heading">
+            <p class="label">KONTEN TERSIMPAN DI BROWSER INI</p>
+            <h2 id="content-list-heading">Kelola Konten</h2>
+            <div class="officer-content-list" id="officer-content-list"></div>
+        </section>
+
+        <aside class="officer-note">
+            <h2>Catatan Penyimpanan</h2>
+            <p>
+                Konten prototipe ini disimpan di localStorage browser/perangkat ini dan tidak otomatis tersinkron ke perangkat lain. Belum ada backend autentikasi; pemeriksaan peran dan kata sandi di aplikasi statis ini bukan pengamanan akun untuk penggunaan produksi.
+            </p>
+        </aside>
+    </main>
+
+    <footer>
+        © <span id="year"></span> CSSA FILKOM Universitas Klabat
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="officer-content.js"></script>
+</body>
+</html>

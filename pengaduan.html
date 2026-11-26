@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panduan mandiri dan kanal pengaduan website SICS.">
+    <title>Kanal Pengaduan | SICS</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-area">
+            <div class="logo"><img src="images/filkom-logo.png" alt="Logo Computer Science Universitas Klabat"></div>
+        </div>
+
+        <button class="menu-btn" type="button" aria-label="Buka menu">☰</button>
+
+        <div class="nav-links">
+            <a href="beranda.html" data-nav-role="public">Beranda</a>
+            <a href="profile.html" data-nav-role="public">Profile</a>
+            <a href="informasi.html" data-nav-role="public">Informasi</a>
+            <a href="pengumuman.html" data-nav-role="public">Pengumuman</a>
+            <a href="agenda.html" data-nav-role="public">Agenda</a>
+            <a href="berita.html" data-nav-role="public">Berita</a>
+            <a href="pengurus.html" data-nav-role="pengurus">Dashboard</a>
+            <a href="agenda-organisasi.html" data-nav-role="officer,pengurus">Agenda Organisasi</a>
+        </div>
+    </nav>
+    <main class="container complaint-page">
+        <header class="complaint-intro">
+            <p class="label">BANTUAN & MASUKAN</p>
+            <h1>Panduan <span>Solusi Mandiri</span></h1>
+            <p class="description">
+                Coba beberapa langkah solusi mandiri terlebih dahulu. Jika kendala masih terjadi,
+                sampaikan detailnya melalui formulir di bawah.
+            </p>
+        </header>
+
+        <section class="complaint-section" aria-labelledby="troubleshooting-title">
+            <div class="complaint-section-heading">
+                <p class="label" id="troubleshooting-title">LANGKAH AWAL</p>
+                <p class="description">Pilih panduan untuk melihat langkah yang dapat dicoba.</p>
+            </div>
+
+            <div class="accordion troubleshooting-accordion" id="troubleshootingAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="heading-refresh">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-refresh" aria-expanded="true" aria-controls="collapse-refresh">
+                            Muat ulang halaman
+                        </button>
+                    </h3>
+                    <div id="collapse-refresh" class="accordion-collapse collapse show" aria-labelledby="heading-refresh" data-bs-parent="#troubleshootingAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Windows atau Linux: tekan <kbd>Ctrl</kbd> + <kbd>F5</kbd>.</li>
+                                <li>Mac: tekan <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>.</li>
+                                <li>Tunggu halaman selesai dimuat sebelum mencoba kembali.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="heading-cache">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-cache" aria-expanded="false" aria-controls="collapse-cache">
+                            Bersihkan cache dan cookies
+                        </button>
+                    </h3>
+                    <div id="collapse-cache" class="accordion-collapse collapse" aria-labelledby="heading-cache" data-bs-parent="#troubleshootingAccordion">
+                        <div class="accordion-body">
+                            Hapus cache dan cookies browser, lalu buka kembali halaman. Anda mungkin perlu login ulang setelah cookies dihapus.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="heading-connection">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-connection" aria-expanded="false" aria-controls="collapse-connection">
+                            Periksa koneksi internet
+                        </button>
+                    </h3>
+                    <div id="collapse-connection" class="accordion-collapse collapse" aria-labelledby="heading-connection" data-bs-parent="#troubleshootingAccordion">
+                        <div class="accordion-body">
+                            Pastikan Wi-Fi atau data seluler tersambung. Coba buka situs lain untuk memastikan koneksi internet berjalan dengan baik.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="heading-private">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-private" aria-expanded="false" aria-controls="collapse-private">
+                            Coba mode incognito atau jendela pribadi
+                        </button>
+                    </h3>
+                    <div id="collapse-private" class="accordion-collapse collapse" aria-labelledby="heading-private" data-bs-parent="#troubleshootingAccordion">
+                        <div class="accordion-body">
+                            Buka situs melalui jendela pribadi. Jika berhasil, ekstensi browser atau data situs yang tersimpan mungkin menyebabkan kendala.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="heading-browser">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-browser" aria-expanded="false" aria-controls="collapse-browser">
+                            Coba browser atau perangkat lain
+                        </button>
+                    </h3>
+                    <div id="collapse-browser" class="accordion-collapse collapse" aria-labelledby="heading-browser" data-bs-parent="#troubleshootingAccordion">
+                        <div class="accordion-body">
+                            Coba browser atau perangkat lain untuk mengetahui apakah masalah hanya terjadi pada browser atau perangkat tertentu. Catat halaman dan langkah yang memicu kendala.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="complaint-section report-section" aria-labelledby="report-title">
+            <div class="complaint-section-heading">
+                <p class="label">MASIH MENGALAMI KENDALA?</p>
+                <h2 id="report-title">Form Kanal Pengaduan</h2>
+                <p class="description">Lengkapi detail masalah agar mudah ditinjau oleh pengelola website.</p>
+            </div>
+
+            <div class="card complaint-form-card">
+                <form id="complaint-form" novalidate>
+                    <div class="row g-4">
+                        <div class="col-12 col-md-6">
+                            <label class="form-label" for="reporter-name">Nama</label>
+                            <input class="form-control" id="reporter-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+                            <div class="invalid-feedback">Nama wajib diisi.</div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label class="form-label" for="reporter-role">Peran</label>
+                            <select class="form-select" id="reporter-role" name="role" required>
+                                <option value="" selected disabled>Pilih peran</option>
+                                <option value="mahasiswa">Mahasiswa</option>
+                                <option value="pengurus">Pengurus Organisasi</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                            <div class="invalid-feedback">Pilih peran Anda.</div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label class="form-label" for="reporter-identity">Identitas (NIM / Email / ID)</label>
+                            <input class="form-control" id="reporter-identity" name="identity" type="text" maxlength="150" placeholder="Masukkan NIM, email, atau ID" required>
+                            <div class="invalid-feedback">Identitas wajib diisi.</div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label class="form-label" for="issue-page">Halaman atau fitur bermasalah</label>
+                            <input class="form-control" id="issue-page" name="page" type="text" maxlength="150" placeholder="Contoh: halaman login" required>
+                            <div class="invalid-feedback">Sebutkan halaman atau fitur yang bermasalah.</div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label" for="issue-category">Kategori kendala</label>
+                            <select class="form-select" id="issue-category" name="category" required>
+                                <option value="" selected disabled>Pilih kategori kendala</option>
+                                <option>Tampilan / UI Rusak</option>
+                                <option>Tombol atau Fitur Tidak Berfungsi</option>
+                                <option>Gagal Login / Akses</option>
+                                <option>Lambat / Tidak Bisa Dibuka</option>
+                                <option>Lainnya</option>
+                            </select>
+                            <div class="invalid-feedback">Pilih kategori kendala.</div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label" for="issue-description">Deskripsi keluhan</label>
+                            <textarea class="form-control" id="issue-description" name="description" rows="5" minlength="15" maxlength="2000" placeholder="Ceritakan kendala dan langkah yang sudah dicoba (minimal 15 karakter)." required></textarea>
+                            <div class="invalid-feedback">Deskripsi wajib diisi minimal 15 karakter.</div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label" for="issue-attachment">Lampiran / screenshot (opsional)</label>
+                            <input class="form-control" id="issue-attachment" name="attachment" type="file" accept="image/png,image/jpeg,image/webp,.pdf">
+                            <div class="form-text">Lampiran hanya dapat dikirim setelah kanal terhubung ke backend.</div>
+                        </div>
+
+                        <div class="col-12">
+                            <button class="btn complaint-submit" type="submit">Kirim Pengaduan</button>
+                            <div class="alert alert-warning d-none mt-4 mb-0" id="complaint-status" role="status" aria-live="polite"></div>
+                        </div>
+                    </div>
+                </form>
+                <div class="complaint-success" id="complaint-success" role="status" aria-live="polite" tabindex="-1" hidden>
+                    <div class="complaint-success-icon" aria-hidden="true">✓</div>
+                    <h3>Pengaduan Dikirim</h3>
+                    <p class="description">Formulir berhasil divalidasi, tetapi pengaduan belum terkirim atau disimpan karena kanal belum terhubung ke backend.</p>
+                    <button class="btn complaint-submit" id="complaint-resubmit" type="button">Kirim Pengaduan Lainnya</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © <span id="year"></span> SICS
+        Ilmu Komputer Universitas Klabat
+    </footer>
+
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

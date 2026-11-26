@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda kegiatan dan informasi terbaru FILKOM UNKLAB.">
+    <title>Agenda | FILKOM UNKLAB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-area">
+            <div class="logo">
+                <img src="images/filkom-logo.png" alt="Logo Computer Science Universitas Klabat">
+            </div>
+        </div>
+
+        <button class="menu-btn" type="button" aria-label="Buka menu">☰</button>
+
+        <div class="nav-links">
+            <a href="beranda.html">Beranda</a>
+            <a href="profile.html">Profile</a>
+            <a href="informasi.html">Informasi</a>
+            <a href="pengumuman.html">Pengumuman</a>
+            <a href="agenda.html" class="active" aria-current="page">Agenda</a>
+            <a href="berita.html">Berita</a>
+            <a href="pengaduan.html">Pengaduan</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <p class="label">AGENDA TERKINI</p>
+        <h1>Agenda <span>FILKOM UNKLAB</span></h1>
+        <p class="description">
+            Informasi agenda yang telah diterbitkan oleh Officer untuk mahasiswa dan pengurus organisasi.
+        </p>
+        <p class="content-status" data-content-status role="status" aria-live="polite" hidden></p>
+
+        <section class="org-announcements" aria-labelledby="public-agenda-heading">
+            <div class="org-announcements-heading">
+                <p class="label">AGENDA PUBLIK</p>
+                <h2 id="public-agenda-heading">Kegiatan Mendatang</h2>
+                <p class="description">Agenda yang diterbitkan akan ditampilkan di bawah ini.</p>
+            </div>
+            <p class="description" data-published-empty="agenda">Belum ada agenda yang diterbitkan.</p>
+            <div class="org-announcements-grid" data-published-content="agenda" hidden></div>
+        </section>
+    </main>
+
+    <footer>
+        © <span id="year"></span> CSSA FILKOM Universitas Klabat
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="officer-content.js"></script>
+</body>
+</html>

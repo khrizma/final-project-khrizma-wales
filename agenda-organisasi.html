@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda internal khusus Officer dan Pengurus CSSA FILKOM UNKLAB.">
+    <title>Agenda Internal | CSSA FILKOM UNKLAB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-required-roles="pengurus,officer">
+    <nav class="navbar">
+        <div class="logo-area">
+            <div class="logo">
+                <img src="images/filkom-logo.png" alt="Logo Computer Science Universitas Klabat">
+            </div>
+        </div>
+
+        <button class="menu-btn" type="button" aria-label="Buka menu">☰</button>
+
+        <div class="nav-links">
+            <a href="officer.html" data-nav-role="officer">Panel Officer</a>
+            <a href="pengurus.html" data-nav-role="pengurus">Dashboard</a>
+            <a href="agenda-organisasi.html" class="active" data-nav-role="officer,pengurus">Agenda Organisasi</a>
+            <a href="pengaduan.html" data-nav-role="officer,pengurus">Pengaduan</a>
+            <button class="logout-btn" id="logout-btn" type="button">Keluar</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <p class="label">AREA INTERNAL ORGANISASI</p>
+        <h1>Agenda <span>Internal Organisasi</span></h1>
+        <p class="description">
+            Agenda internal ini hanya tersedia untuk Officer dan Pengurus Organisasi.
+        </p>
+        <p class="content-status" data-content-status role="status" aria-live="polite" hidden></p>
+
+        <section class="org-announcements" aria-labelledby="org-agenda-heading">
+            <div class="org-announcements-heading">
+                <p class="label">AGENDA & RENCANA KERJA</p>
+                <h2 id="org-agenda-heading">Rencana Organisasi CSSA</h2>
+                <p class="description">
+                    Contoh rancangan internal. Agenda dan program berikut belum disahkan; sesuaikan setelah dibahas dan disepakati pengurus.
+                </p>
+            </div>
+
+            <div class="org-announcements-grid">
+                <article class="card org-announcement-card">
+                    <span class="date">DRAFT — JADWAL BELUM DITETAPKAN</span>
+                    <h3>Rapat Koordinasi Pengurus CSSA</h3>
+                    <p>
+                        Rencana agenda meliputi evaluasi kegiatan berjalan, laporan tiap divisi, pembagian tanggung jawab, dan persiapan program semester depan. Waktu dan tempat ditentukan melalui koordinasi internal.
+                    </p>
+                </article>
+
+                <article class="card org-announcement-card">
+                    <span class="date">USULAN PROGRAM — BELUM DISETUJUI</span>
+                    <h3>Rancangan Program Semester Depan</h3>
+                    <p>
+                        Usulan awal mencakup workshop pengembangan web atau mobile, sesi belajar bersama dan mentoring pemrograman, serta proyek kolaborasi mahasiswa. Rencana ini perlu ditinjau dan disetujui pengurus.
+                    </p>
+                </article>
+
+                <article class="card org-announcement-card">
+                    <span class="date">KOORDINASI DIVISI</span>
+                    <h3>Persiapan Usulan Kegiatan</h3>
+                    <p>
+                        Setiap divisi dapat menyiapkan tujuan, sasaran peserta, kebutuhan, dan perkiraan anggaran untuk dibahas pada rapat koordinasi. Ini merupakan contoh alur kerja, bukan keputusan resmi organisasi.
+                    </p>
+                </article>
+            </div>
+            <div class="org-announcements-grid" data-internal-content hidden></div>
+        </section>
+    </main>
+
+    <footer>
+        © <span id="year"></span> CSSA FILKOM Universitas Klabat
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="officer-content.js"></script>
+</body>
+</html>
